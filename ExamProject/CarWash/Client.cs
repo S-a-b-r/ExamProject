@@ -8,22 +8,22 @@ namespace ExamProject
     {
         public DateTime TimeVisit;
         public string Sex;
-        public string FIO;
+        private string fio;
         public int Age;
         public int SpendMoney = 0;
         public int ByuService = 0;
-        string fio
+        public string FIO
         {
             get
             {
-                if (Sex == "male")
+                if (Sex == "male" || Sex == "Male")
                 {
-                    return "Уважаемый "+ FIO;
+                    return "Уважаемый "+ fio;
                 }
-                return "Уважаемая " + FIO;
+                return "Уважаемая " + fio;
             }
             set {
-                FIO = value;
+                fio = value;
             }
         }
 
@@ -31,7 +31,7 @@ namespace ExamProject
         {
             TimeVisit = timeVisit;
             Sex = sex;
-            fio = fullname;
+            FIO = fullname;
             Age = age;
         }
 
@@ -40,13 +40,13 @@ namespace ExamProject
             Client client3 = (Client)client2;
             if (this.ByuService > client3.ByuService)
             {
-                return 1;
+                return -1;
             }
             else if (this.ByuService == client3.ByuService)
             {
                 if (this.Age > client3.Age)
                 {
-                    return 1;
+                    return -1;
                 }
                 else if (this.Age == client3.Age)
                 {
@@ -54,12 +54,12 @@ namespace ExamProject
                 }
                 else
                 {
-                    return -1;
+                    return 1;
                 }
             }
             else
             {
-                return -1;
+                return 1;
             }
         }
         

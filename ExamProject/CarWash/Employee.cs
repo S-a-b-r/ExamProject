@@ -7,10 +7,14 @@ namespace ExamProject.CarWash
     class Employee
     {
         public int WorkDone;
-
+        public string FIO;
+        public Employee(string fio)
+        {
+            FIO = fio;
+        }
         public void PrintWork()
         {
-            Console.WriteLine(WorkDone);
+            Console.WriteLine(FIO+" выполнил "+ WorkDone + " услуг");
         }
     }
 }
