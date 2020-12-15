@@ -95,7 +95,7 @@ namespace ExamProject
             Console.WriteLine();
             stuff1.PrintWork();
             Console.WriteLine();
-            Console.WriteLine(clienTest.SpendMoney);
+            clienTest.printSpendMoney();
             
             Console.ReadLine();
         }

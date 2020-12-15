@@ -35,6 +35,11 @@ namespace ExamProject
             Age = age;
         }
 
+        public void printSpendMoney()
+        {
+            Console.WriteLine(fio + " потратил " + SpendMoney);
+        }
+
         public int CompareTo(object client2)
         {
             Client client3 = (Client)client2;
